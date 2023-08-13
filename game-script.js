@@ -1,9 +1,9 @@
-// Get the URL parameters
+  // Get the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const gameNumber = urlParams.get("gameNumber");
 
 // Fetch the game data from the Google Sheets link
-const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLbWKalCA797IkK5AI47tXvjqmSWf5AslOpYey4ck9oXGvkLXG8lQ0ibii-XQCldr5BHclGt9mBmo_/pub?gid=0&single=true&output=csv";
+const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLbWKalCA797IkK5AI47tXvjqmSWf5AslOpYey4ck9oXGvkLXG8lQ0ibii-XQCldr5BHclGt9mBmo_/pub?gid=0&single=true&output=csv"; // Replace with your published CSV link
 fetch(sheetURL)
   .then(response => response.text())
   .then(data => {
@@ -21,3 +21,4 @@ fetch(sheetURL)
     const gameNamePlaceholder = document.getElementById("game-name-placeholder");
     gameNamePlaceholder.textContent = gameName;
   });
+  
