@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const gameNumber = urlParams.get("gameNumber");
 
 // Fetch the game data from the Google Sheets link
-const sheetURL = "https://docs.google.com/spreadsheets/d/11Mkl0WLT1ae99ZjKNr_W2MEE-KSN9vmq3tZeG2imBy4/edit?usp=sharing";
+const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLbWKalCA797IkK5AI47tXvjqmSWf5AslOpYey4ck9oXGvkLXG8lQ0ibii-XQCldr5BHclGt9mBmo_/pub?gid=0&single=true&output=csv";
 fetch(sheetURL)
   .then(response => response.text())
   .then(data => {
