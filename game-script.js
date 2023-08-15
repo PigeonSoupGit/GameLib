@@ -36,4 +36,10 @@ fetch(sheetURL)
     document.getElementById("game-name-placeholder").textContent = gameData.name;
     document.getElementById("game-name-placeholder-table").textContent = gameData.name;
     document.getElementById("game-description").textContent = gameData.description;
+    document.getElementById("game-id-image").textContent = gameNumber;
+    document.getElementById("game-id-image").src = `../images/${gameNumber}.jpg`; // Assuming your images are in a folder named "images"
+    
+    // Set the footer content
+    const footer = document.getElementById("page-footer");
+    footer.innerHTML = "FOUND THIS GAME? IF LOST EMAIL: Mitchell.Newman.8@gmail.com";
   });
